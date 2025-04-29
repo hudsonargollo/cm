@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import styles from './OnboardingContainer.module.css';
+import styles from 'OnboardingContainer.module.css';
 
 const OnboardingContainer: React.FC = () => {
   const router = useRouter();
