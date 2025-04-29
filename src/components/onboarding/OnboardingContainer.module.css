@@ -6,6 +6,7 @@
   min-height: 100vh;
 }
 
+/* Step content */
 .stepContent {
   max-width: 800px;
   margin: 80px auto 0;
@@ -20,20 +21,24 @@
   transform: translateY(0);
 }
 
+/* Titles */
+.container h1,
+.container h2 {
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
 .container h1 {
   font-size: 2.5rem;
-  font-weight: 800;
   margin-bottom: 1rem;
-  letter-spacing: 0.05em;
 }
 
 .container h2 {
   font-size: 2rem;
-  font-weight: 700;
   margin-bottom: 1.5rem;
-  letter-spacing: 0.03em;
 }
 
+/* Paragraphs */
 .container p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -41,22 +46,23 @@
   margin-bottom: 2rem;
 }
 
+/* Button */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background-color: var(--primary, #dc2626);
-  color: white;
+  color: #fff;
   font-weight: 700;
   font-size: 1rem;
   padding: 0.75rem 2rem;
   border-radius: 0.375rem;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.2), 0 2px 4px -1px rgba(220, 38, 38, 0.1);
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
@@ -69,6 +75,7 @@
   margin-left: 0.5rem;
 }
 
+/* Progress Indicator */
 .progressIndicator {
   position: fixed;
   top: 2rem;
@@ -102,6 +109,7 @@
   background-color: #f59e0b;
 }
 
+/* Mascot */
 .mascot {
   position: fixed;
   width: 160px;
@@ -109,31 +117,30 @@
   z-index: 40;
 }
 
-.mascotStep1 {
-  bottom: 2rem;
-  right: 2rem;
-}
-
-.mascotStep2 {
-  bottom: 2rem;
-  left: 2rem;
-}
-
-.mascotStep3 {
-  top: 5rem;
-  right: 2rem;
-}
-
+.mascotStep1,
+.mascotStep2,
 .mascotStep4 {
   bottom: 2rem;
-  left: 2rem;
 }
 
+.mascotStep3,
 .mascotStep5 {
   top: 5rem;
+  bottom: auto;
+}
+
+.mascotStep1,
+.mascotStep3,
+.mascotStep5 {
   right: 2rem;
 }
 
+.mascotStep2,
+.mascotStep4 {
+  left: 2rem;
+}
+
+/* Mascot extras */
 .mascotContainer {
   position: relative;
 }
@@ -143,7 +150,7 @@
   top: -0.5rem;
   right: -0.5rem;
   background-color: var(--primary, #dc2626);
-  color: white;
+  color: #fff;
   font-weight: 700;
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
@@ -163,10 +170,11 @@
 
 .mascotDialog p {
   font-size: 0.875rem;
-  margin-bottom: 0;
   color: #e5e7eb;
+  margin-bottom: 0;
 }
 
+/* Card */
 .card {
   background-color: rgba(31, 41, 55, 0.5);
   border: 1px solid #374151;
@@ -176,6 +184,7 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+/* Slider */
 .sliderContainer {
   height: 12rem;
   background: linear-gradient(90deg, #0f1115 0%, #1f2937 100%);
@@ -225,6 +234,7 @@
   margin: 1rem 0;
 }
 
+/* Labels */
 .labels {
   display: flex;
   justify-content: space-between;
@@ -233,6 +243,7 @@
   margin-bottom: 2rem;
 }
 
+/* Option Grid */
 .optionGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -240,6 +251,7 @@
   margin-bottom: 2rem;
 }
 
+/* Option Button */
 .optionBtn {
   display: flex;
   align-items: center;
@@ -287,6 +299,7 @@
   border-radius: 50%;
 }
 
+/* Section Title */
 .sectionTitle {
   display: flex;
   align-items: center;
@@ -308,6 +321,7 @@
   color: #f59e0b;
 }
 
+/* Timeline */
 .timeline {
   position: relative;
   width: 100%;
@@ -341,7 +355,7 @@
 
 .timelineDot.active {
   background-color: var(--primary, #dc2626);
-  color: white;
+  color: #fff;
 }
 
 .timelineLabel {
@@ -357,36 +371,51 @@
   color: var(--primary, #dc2626);
 }
 
+/* Dashboard */
 .dashboardGrid {
   display: grid;
-  grid-template
-
-.starIcon {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
   .mascot {
     width: 120px;
   }
-  
+
   .dashboardGrid {
     grid-template-columns: 1fr;
   }
-  
+
   .container h1 {
     font-size: 2rem;
   }
-  
+
   .container h2 {
     font-size: 1.5rem;
   }
 
-  .challengeGrid {
-    grid-template-columns: 1fr;
-  }
-  
+  .challengeGrid,
   .optionGrid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Animation */
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Utilities */
+.textCenter {
+  text-align: center;
+}
+
+.italic {
+  font-style: italic;
 }
