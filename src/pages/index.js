@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import './app/globals.css';
 
 export default function Home() {
   const [currentStep, setCurrentStep] = useState(1);
