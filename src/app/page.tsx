@@ -1,8 +1,8 @@
 import OnboardingContainer from '@/components/onboarding/OnboardingContainer';
 
-export default function Home() {
+export default function OnboardingPage() {
   return (
-    <main>
+    <main className="min-h-screen bg-background">
       <OnboardingContainer />
     </main>
   );
