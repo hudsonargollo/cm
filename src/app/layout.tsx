@@ -1,29 +1,34 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import { GlobalProviders } from '@/components/providers'
+import type { Metadata } from 'next'
+import MobileAlert from '@/components/MobileAlert'
+import { rubik, aeonik } from './fonts'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Modo Caverna - Sua jornada de transformação',
-  description: 'Sua jornada de transformação começa aqui. Os próximos 40 dias podem mudar completamente sua vida.',
-};
+  title: 'Modo Caverna - Desperte a sua melhor versão -',
+  description:
+    'Ative o MODO CAVERNA, desperte a sua melhor versão e acelere a conquista dos seus sonhos Menos procrastinação, ansiedade e distrações Mais propósito, foco, produtividade e resultados Eu aceito o desafio Ative o MODO CAVERNA, desperte a sua melhor versão e acelere a conquista dos seus sonhos Menos procrastinação, ansiedade e distrações Mais propósito, […]',
+  openGraph: {
+    title: 'Modo Caverna - Desperte a sua melhor versão',
+    description:
+      'Ative o MODO CAVERNA, desperte a sua melhor versão e acelere a conquista dos seus sonhos Menos procrastinação, ansiedade e distrações Mais propósito, foco, produtividade e resultados Eu aceito o desafio',
+    url: 'https://modocaverna.com',
+    siteName: 'Modo Caverna',
+    locale: 'pt_BR',
+  },
+}
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html lang="pt-BR">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" 
-          rel="stylesheet"
-        />
-      </head>
-      <body>
-        {children}
+    <html lang="pt_BR" className={`${rubik.variable} ${aeonik.variable}`}>
+      <body className="antialiased bg-background text-foreground font-medium leading-tight">
+        <MobileAlert />
+        <GlobalProviders>{children}</GlobalProviders>
       </body>
     </html>
-  );
+  )
 }
