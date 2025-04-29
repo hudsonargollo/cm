@@ -4,6 +4,7 @@
   padding: 20px 20px 100px;
   position: relative;
   min-height: 100vh;
+  font-family: 'Rubik', 'Aeonik', sans-serif;
 }
 
 .stepContent {
@@ -25,6 +26,7 @@
   font-weight: 800;
   margin-bottom: 1rem;
   letter-spacing: 0.05em;
+  color: #ffffff;
 }
 
 .container h2 {
@@ -32,12 +34,13 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   letter-spacing: 0.03em;
+  color: #ffffff;
 }
 
 .container p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #d1d5db;
+  color: #A0A0A9;
   margin-bottom: 2rem;
 }
 
@@ -45,8 +48,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary, #dc2626);
-  color: white;
+  background-color: #ff3333;
+  color: #ffffff;
   font-weight: 700;
   font-size: 1rem;
   padding: 0.75rem 2rem;
@@ -56,13 +59,13 @@
   transition: all 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.2), 0 2px 4px -1px rgba(220, 38, 38, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(255, 51, 51, 0.2), 0 2px 4px -1px rgba(255, 51, 51, 0.1);
 }
 
 .btn:hover {
-  background-color: var(--primary-hover, #b91c1c);
+  background-color: #e02020;
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.2), 0 4px 6px -2px rgba(220, 38, 38, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(255, 51, 51, 0.2), 0 4px 6px -2px rgba(255, 51, 51, 0.1);
 }
 
 .btn svg {
@@ -74,13 +77,13 @@
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(23, 25, 35, 0.7);
+  background-color: rgba(39, 39, 42, 0.7);
   backdrop-filter: blur(8px);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   display: flex;
   gap: 0.5rem;
-  border: 1px solid #2d3748;
+  border: 1px solid #3f3f46;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   z-index: 50;
 }
@@ -89,12 +92,12 @@
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
-  background-color: #4b5563;
+  background-color: #3f3f46;
   transition: all 0.3s ease;
 }
 
 .progressDot.active {
-  background-color: var(--primary, #dc2626);
+  background-color: #ff3333;
   transform: scale(1.25);
 }
 
@@ -142,8 +145,8 @@
   position: absolute;
   top: -0.5rem;
   right: -0.5rem;
-  background-color: var(--primary, #dc2626);
-  color: white;
+  background-color: #ff3333;
+  color: #ffffff;
   font-weight: 700;
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
@@ -152,8 +155,8 @@
 }
 
 .mascotDialog {
-  background-color: #1f2937;
-  border: 1px solid #374151;
+  background-color: #27272A;
+  border: 1px solid #3f3f46;
   padding: 1rem;
   border-radius: 0.5rem;
   margin-top: 0.5rem;
@@ -164,12 +167,12 @@
 .mascotDialog p {
   font-size: 0.875rem;
   margin-bottom: 0;
-  color: #e5e7eb;
+  color: #A0A0A9;
 }
 
 .card {
-  background-color: rgba(31, 41, 55, 0.5);
-  border: 1px solid #374151;
+  background-color: rgba(39, 39, 42, 0.5);
+  border: 1px solid #3f3f46;
   border-radius: 0.75rem;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -178,11 +181,11 @@
 
 .sliderContainer {
   height: 12rem;
-  background: linear-gradient(90deg, #0f1115 0%, #1f2937 100%);
+  background: linear-gradient(90deg, #000000 0%, #27272A 100%);
   border-radius: 0.5rem;
   position: relative;
   overflow: hidden;
-  border: 1px solid #374151;
+  border: 1px solid #3f3f46;
   margin-bottom: 1rem;
 }
 
@@ -192,7 +195,7 @@
   left: 0;
   height: 100%;
   width: 15%;
-  background: linear-gradient(90deg, #b91c1c 0%, #f59e0b 100%);
+  background: linear-gradient(90deg, #ff3333 0%, #f59e0b 100%);
   transition: width 0.3s ease;
 }
 
@@ -205,7 +208,7 @@
   height: 1.5rem;
   background-color: white;
   border-radius: 50%;
-  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+  box-shadow: 0 0 15px rgba(255, 51, 51, 0.5);
   z-index: 2;
   transition: left 0.3s ease;
 }
@@ -229,7 +232,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: #A0A0A9;
   margin-bottom: 2rem;
 }
 
@@ -245,34 +248,34 @@
   align-items: center;
   text-align: left;
   padding: 1rem;
-  border: 1px solid #374151;
+  border: 1px solid #3f3f46;
   border-radius: 0.5rem;
   background-color: transparent;
-  color: #d1d5db;
+  color: #A0A0A9;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .optionBtn:hover {
-  border-color: #6b7280;
+  border-color: #A0A0A9;
 }
 
 .optionBtn.selected {
-  border-color: var(--primary, #dc2626);
-  background-color: rgba(220, 38, 38, 0.1);
+  border-color: #ff3333;
+  background-color: rgba(255, 51, 51, 0.1);
 }
 
 .optionRadio {
   width: 1.5rem;
   height: 1.5rem;
-  border: 2px solid #4b5563;
+  border: 2px solid #3f3f46;
   border-radius: 50%;
   margin-right: 0.75rem;
   position: relative;
 }
 
 .selected .optionRadio {
-  border-color: var(--primary, #dc2626);
+  border-color: #ff3333;
 }
 
 .selected .optionRadio::after {
@@ -283,7 +286,7 @@
   transform: translate(-50%, -50%);
   width: 0.75rem;
   height: 0.75rem;
-  background-color: var(--primary, #dc2626);
+  background-color: #ff3333;
   border-radius: 50%;
 }
 
@@ -312,7 +315,7 @@
   position: relative;
   width: 100%;
   height: 0.25rem;
-  background-color: #374151;
+  background-color: #3f3f46;
   margin: 2rem 0;
   display: flex;
   justify-content: space-between;
@@ -330,17 +333,17 @@
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: #374151;
+  background-color: #3f3f46;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   margin-top: -1.375rem;
-  color: #9ca3af;
+  color: #A0A0A9;
 }
 
 .timelineDot.active {
-  background-color: var(--primary, #dc2626);
+  background-color: #ff3333;
   color: white;
 }
 
@@ -348,13 +351,13 @@
   margin-top: 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #9ca3af;
+  color: #A0A0A9;
   width: 5rem;
   text-align: center;
 }
 
 .timelineDot.active + .timelineLabel {
-  color: var(--primary, #dc2626);
+  color: #ff3333;
 }
 
 .dashboardGrid {
@@ -365,7 +368,7 @@
 }
 
 .dashboardCard {
-  background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
+  background: linear-gradient(135deg, #ff3333 0%, #cc2222 100%);
   border-radius: 0.5rem;
   padding: 1.5rem;
   color: white;
@@ -373,7 +376,7 @@
   transition: transform 0.2s ease;
   position: relative;
   overflow: hidden;
-  border: 1px solid #b91c1c;
+  border: 1px solid #ff3333;
 }
 
 .dashboardCard:hover {
@@ -397,16 +400,16 @@
 
 .dashboardCard:nth-child(2),
 .dashboardCard:nth-child(3) {
-  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-  border-color: #374151;
+  background: linear-gradient(135deg, #27272A 0%, #18181b 100%);
+  border-color: #3f3f46;
 }
 
 .tooltip {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: #111827;
-  border: 1px solid #374151;
+  background-color: #18181b;
+  border: 1px solid #3f3f46;
   border-top-left-radius: 0.5rem;
   padding: 0.75rem;
   width: 16rem;
@@ -442,7 +445,7 @@
   right: 0;
   bottom: 0;
   border-radius: 0.5rem;
-  box-shadow: 0 0 0 3px var(--primary, #dc2626);
+  box-shadow: 0 0 0 3px #ff3333;
   opacity: 0;
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
@@ -461,7 +464,7 @@
 
 .phaseBox {
   padding: 1.5rem;
-  background-color: rgba(55, 65, 81, 0.5);
+  background-color: rgba(39, 39, 42, 0.5);
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
 }
@@ -505,17 +508,17 @@
 }
 
 .challengeCard {
-  background-color: rgba(55, 65, 81, 0.3);
+  background-color: rgba(39, 39, 42, 0.3);
   border-radius: 0.5rem;
   padding: 1.25rem;
   text-align: center;
-  border: 1px solid #4b5563;
+  border: 1px solid #3f3f46;
 }
 
 .challengeIcon {
   width: 4rem;
   height: 4rem;
-  background-color: #1f2937;
+  background-color: #27272A;
   border-radius: 9999px;
   display: flex;
   justify-content: center;
