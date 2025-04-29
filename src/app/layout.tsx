@@ -1,5 +1,13 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import './globals.css';
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
 
 export const metadata: Metadata = {
   title: 'Modo Caverna - Desperte a sua melhor versão',
