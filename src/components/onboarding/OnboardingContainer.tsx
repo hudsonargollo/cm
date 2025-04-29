@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from './OnboardingContainer.module.css';
 
 const OnboardingContainer: React.FC = () => {
+  const router = useRouter();
   // State to track the current step
   const [currentStep, setCurrentStep] = useState(1);
   
@@ -37,6 +39,11 @@ const OnboardingContainer: React.FC = () => {
   // Function to go to a specific step
   const goToStep = (step: number) => {
     setCurrentStep(step);
+  };
+
+  // Function to navigate to dashboard after completing onboarding
+  const goToDashboard = () => {
+    router.push('/dashboard');
   };
 
   // Function to select an option
@@ -86,7 +93,7 @@ const OnboardingContainer: React.FC = () => {
     <div className={styles.container}>
       {/* Progress Indicator */}
       <div className={styles.progressIndicator}>
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((step) => (
+        {[1, 2, 3, 4, 5].map((step) => (
           <div 
             key={step}
             className={`${styles.progressDot} ${currentStep === step ? styles.active : ''} ${currentStep > step ? styles.completed : ''}`}
@@ -99,7 +106,7 @@ const OnboardingContainer: React.FC = () => {
         <div className={`${styles.stepContent} ${styles.active}`}>
           <div className={styles.starIcon}>
             <svg width="120" height="120" viewBox="0 0 100 100" fill="none">
-              <path d="M50 0L63 38H100L69 61L82 100L50 76L18 100L31 61L0 38H37L50 0Z" fill="#dc2626"/>
+              <path d="M50 0L63 38H100L69 61L82 100L50 76L18 100L31 61L0 38H37L50 0Z" fill="#ff3333"/>
             </svg>
           </div>
           <h1>MODO CAVERNA</h1>
@@ -342,8 +349,8 @@ const OnboardingContainer: React.FC = () => {
             </div>
           </div>
           
-          <button className={styles.btn} onClick={() => goToStep(6)}>
-            PRÓXIMO
+          <button className={styles.btn} onClick={goToDashboard}>
+            COMEÇAR AGORA
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 18l6-6-6-6"></path>
             </svg>
