@@ -1,8 +1,40 @@
+// 1. Create a netlify.toml file in your project root
+
 [build]
   command = "npm run build"
-  publish = "out"
+  publish = ".next"  # Use .next instead of out for App Router
 
 [build.environment]
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  NODE_VERSION = "18.17.0"
-  NPM_FLAGS = "--legacy-peer-deps"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"  # Optional: Skip Netlify's Next.js plugin if you want manual control
+
+# Add this if you need custom Next.js export settings
+[build.processing]
+  skip_processing = false
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# 2. Update your next.config.js for proper output
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  
+  // Configure output for Netlify compatibility
+  // Note: For App Router, you typically don't need 'out' directory anymore
+  output: "standalone",
+  
+  // The rest of your config stays the same
+  // ...
+};
+
+module.exports = nextConfig;
+
+// 3. Update your package.json build script if needed
+
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
+}
