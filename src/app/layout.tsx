@@ -1,13 +1,5 @@
-import type { Metadata } from 'next'
-import 'globals.css';
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
-}
+import type { Metadata } from 'next';
+import './globals.css'; // Adjust the path if 'globals.css' is located elsewhere
 
 export const metadata: Metadata = {
   title: 'Modo Caverna - Desperte a sua melhor versão',
@@ -21,20 +13,20 @@ export const metadata: Metadata = {
     siteName: 'Modo Caverna',
     locale: 'pt_BR',
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt_BR">
+    <html lang="pt-BR">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" 
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
       </head>
@@ -42,5 +34,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }
