@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.css'; // Adjust the path if 'globals.css' is located elsewhere
+import 'globals.css'; // Adjust the path if 'globals.css' is located elsewhere
 
 export const metadata: Metadata = {
   title: 'Modo Caverna - Desperte a sua melhor versão',
