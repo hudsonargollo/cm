@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+// Make sure this file exists in the same directory
 import styles from './OnboardingContainer.module.css';
 
 const OnboardingContainer: React.FC = () => {
@@ -88,6 +89,9 @@ const OnboardingContainer: React.FC = () => {
   const hideTooltip = () => {
     setActiveTooltip(null);
   };
+
+  // For debugging - let's log the styles object
+  console.log('Styles object:', styles);
 
   return (
     <div className={styles.container}>
